@@ -1,0 +1,5 @@
+def sum(*angka):
+    hasil=0
+    for a in angka:
+        hasil+=a
+    print(hasil)
