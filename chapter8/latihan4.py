@@ -1,0 +1,28 @@
+sayur=["bayam", "kangkung", "wortel", "selada"]
+
+lagi='y'
+while lagi == 'y':
+    print('A. Tambah data sayur')
+    print('B. Hapus data sayur')
+    print('C. Tampilan data sayur')
+
+    pilih=input("\nPilihan anda: ")
+    if pilih=='A':
+        tambah=input('\nTambahkan sayur yang anda inginkan: ')
+        sayur.append(tambah)
+
+    elif pilih=='B':
+        hapus=input('\nHapus sayur yang anda inginkan: ')
+        try:
+            sayur.remove(hapus)
+            print("\nMenghapus sayur bernama:%s"% hapus)
+        except ValueError:
+            print("\nTidak ditemukan data bernama:%s"% hapus)
+
+    elif pilih=='C':
+        print("\nData sayur:%s"% sayur)
+
+    else:
+        print("\nPilihan tidak ada:%s"% pilih)
+
+    lagi=input('\nMengolah data lagi (y/n)?')
